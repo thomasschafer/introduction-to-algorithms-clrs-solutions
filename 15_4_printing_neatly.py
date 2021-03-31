@@ -7,6 +7,7 @@ import numpy as np
 def minimise_extra_spaces(word_lengths, max_chars_per_line):
     n = len(word_lengths)
     min_extra_spaces = [[float('inf') for __ in range(n)] for __ in range(n)]
+    solution_reconstruction = [[None for __ in range(n)] for __ in range(n)]
     
     for l in range(0, n):
         for i in range(0, n-l):
