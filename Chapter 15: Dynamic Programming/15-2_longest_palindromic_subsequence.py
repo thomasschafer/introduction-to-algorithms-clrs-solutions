@@ -1,4 +1,10 @@
-#15-2
+# 15-2
+# ----
+# Given a string s, find the longest palindromic subsequence of s. For instance, if
+# s = 'hello there' then the longest palindromic substring of s is 'elle', so the function should
+# return 4.
+
+# Below is my solution, which uses dynamic programming and runs in O(n^2) time using O(n^2) space.
 
 def longest_pal_sub(s):
     n = len(s)
@@ -21,6 +27,6 @@ def longest_pal_sub(s):
     return partial_lps[0][n-1]
 
 
-w = 'cbbd'
+w = 'hello there'
 m = longest_pal_sub(w)
 print(m)
